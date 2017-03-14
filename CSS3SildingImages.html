@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3SildingImages</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 600px;
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+        input {
+            display: none;
+        }
+        
+        label {
+            margin: 300px 10px 0px 10px;
+            text-align: center;
+            z-index: 999;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 5px solid rgba(0,0,0,0.2);
+            background-color: #68abc2;
+            line-height: 50px;
+            color: #fff;
+            font-size: 30px;
+            font-family: 'microsoft yahei';
+        }
+        label:hover {
+            cursor: pointer;
+        }
+        input.cr-selector-img-1:checked ~ label.cr-label-img-1, 
+        input.cr-selector-img-2:checked ~ label.cr-label-img-2, 
+        input.cr-selector-img-3:checked ~ label.cr-label-img-3, 
+        input.cr-selector-img-4:checked ~ label.cr-label-img-4 {
+            color: #68abc2;
+            background-color: #fff;
+            border:5px solid rgba(104,171,194,.5);
+        }
+        .panel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0px;
+        }
+        .slice {
+            width: 150px;
+            height: 100%;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .slice span {
+            display: block;
+            position: absolute;
+            /*left: -150px;*/
+            left: 0px;
+            transform: scale(1.4);
+            opacity: 0;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            text-indent: -999em;
+            -webkit-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+        .slice span:nth-of-type(1) {
+            background-image: url('./images/1.jpg');
+            background-repeat: no-repeat;
+        }
+        .slice span:nth-of-type(2) {
+            background-image: url('./images/2.jpg');
+            background-repeat: no-repeat;
+        }
+        .slice span:nth-of-type(3) {
+            background-image: url('./images/3.jpg');
+            background-repeat: no-repeat;
+        }
+        .slice span:nth-of-type(4) {
+            background-image: url('./images/4.jpg');
+            background-repeat: no-repeat;
+        }
+        .slice:nth-of-type(2) span{
+            background-position: -150px 0px;
+        }
+        .slice:nth-of-type(3) span{
+            background-position: -300px 0px;
+        }
+        .slice:nth-of-type(4) span{
+            background-position: -450px 0px;
+        }
+        input.cr-selector-img-1:checked ~ .panel .slice span:nth-of-type(1),
+        input.cr-selector-img-2:checked ~ .panel .slice span:nth-of-type(2),
+        input.cr-selector-img-3:checked ~ .panel .slice span:nth-of-type(3),
+        input.cr-selector-img-4:checked ~ .panel .slice span:nth-of-type(4) {
+            /*left: 0px;*/
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" checked/>
+        <label for="select-img-1" class="cr-label-img-1">1</label>
+        
+        <input id="select-img-2" name="radio-set-1" type="radio" class="cr-selector-img-2" />
+        <label for="select-img-2" class="cr-label-img-2">2</label>
+        
+        <input id="select-img-3" name="radio-set-1" type="radio" class="cr-selector-img-3" />
+        <label for="select-img-3" class="cr-label-img-3">3</label>
+        
+        <input id="select-img-4" name="radio-set-1" type="radio" class="cr-selector-img-4" />
+        <label for="select-img-4" class="cr-label-img-4">4</label>
+        <div class="panel">
+            <div class="slice">
+                <span>Slice1 - Image1</span>
+                <span>Slice1 - Image2</span>
+                <span>Slice1 - Image3</span>
+                <span>Slice1 - Image4</span>
+            </div>
+            <div class="slice">
+                <span>Slice2 - Image1</span>
+                <span>Slice2 - Image2</span>
+                <span>Slice2 - Image3</span>
+                <span>Slice2 - Image4</span>
+            </div>
+            <div class="slice">
+                <span>Slice3 - Image1</span>
+                <span>Slice3 - Image2</span>
+                <span>Slice3 - Image3</span>
+                <span>Slice3 - Image4</span>
+            </div>
+            <div class="slice">
+                <span>Slice4 - Image1</span>
+                <span>Slice4 - Image2</span>
+                <span>Slice4 - Image3</span>
+                <span>Slice4 - Image4</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
