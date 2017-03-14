@@ -33,10 +33,10 @@
         label:hover {
             cursor: pointer;
         }
-        input.cr-selector-img-1:checked ~ label.cr-label-img-1, 
-        input.cr-selector-img-2:checked ~ label.cr-label-img-2, 
-        input.cr-selector-img-3:checked ~ label.cr-label-img-3, 
-        input.cr-selector-img-4:checked ~ label.cr-label-img-4 {
+        input.selector-img-1:checked ~ label.label-img-1, 
+        input.selector-img-2:checked ~ label.label-img-2, 
+        input.selector-img-3:checked ~ label.label-img-3, 
+        input.selector-img-4:checked ~ label.label-img-4 {
             color: #68abc2;
             background-color: #fff;
             border:5px solid rgba(104,171,194,.5);
@@ -95,10 +95,10 @@
         .slice:nth-of-type(4) span{
             background-position: -450px 0px;
         }
-        input.cr-selector-img-1:checked ~ .panel .slice span:nth-of-type(1),
-        input.cr-selector-img-2:checked ~ .panel .slice span:nth-of-type(2),
-        input.cr-selector-img-3:checked ~ .panel .slice span:nth-of-type(3),
-        input.cr-selector-img-4:checked ~ .panel .slice span:nth-of-type(4) {
+        input.selector-img-1:checked ~ .panel .slice span:nth-of-type(1),
+        input.selector-img-2:checked ~ .panel .slice span:nth-of-type(2),
+        input.selector-img-3:checked ~ .panel .slice span:nth-of-type(3),
+        input.selector-img-4:checked ~ .panel .slice span:nth-of-type(4) {
             /*left: 0px;*/
             transform: scale(1);
             opacity: 1;
@@ -107,17 +107,17 @@
 </head>
 <body>
     <div class="container">
-        <input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" checked/>
-        <label for="select-img-1" class="cr-label-img-1">1</label>
+        <input id="select-img-1" name="radio-set-1" type="radio" class="selector-img-1" checked/>
+        <label for="select-img-1" class="label-img-1">1</label>
         
-        <input id="select-img-2" name="radio-set-1" type="radio" class="cr-selector-img-2" />
-        <label for="select-img-2" class="cr-label-img-2">2</label>
+        <input id="select-img-2" name="radio-set-1" type="radio" class="selector-img-2" />
+        <label for="select-img-2" class="label-img-2">2</label>
         
-        <input id="select-img-3" name="radio-set-1" type="radio" class="cr-selector-img-3" />
-        <label for="select-img-3" class="cr-label-img-3">3</label>
+        <input id="select-img-3" name="radio-set-1" type="radio" class="selector-img-3" />
+        <label for="select-img-3" class="label-img-3">3</label>
         
-        <input id="select-img-4" name="radio-set-1" type="radio" class="cr-selector-img-4" />
-        <label for="select-img-4" class="cr-label-img-4">4</label>
+        <input id="select-img-4" name="radio-set-1" type="radio" class="selector-img-4" />
+        <label for="select-img-4" class="label-img-4">4</label>
         <div class="panel">
             <div class="slice">
                 <span>Slice1 - Image1</span>
